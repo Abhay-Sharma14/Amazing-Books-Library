@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "9958717c-6c8b-4a37-a8f4-1b65d2928b17",
+		"name": "Edureka_microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8989/issue/issueBook/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\" : 1.0,\r\n    \"isbn\" : \"core java\",\r\n    \"title\" : \"core-java by crown\",\r\n    \"publishedDate\" : \"2022-05-16T06:14:00.374Z\",\r\n    \"author\" : \"penten\",\r\n    \"issuedCopies\" : 5,\r\n    \"totalCopies\" : 10\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8989/issue/issueBook/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"issue",
+						"issueBook",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/library/multiplebookSave",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n\t\"id\" : 1,\r\n    \"isbn\" : \"core java\",\r\n    \"title\" : \"core-java by crown\",\r\n    \"publishedDate\" : \"2022-05-16T06:14:00.374Z\",\r\n    \"author\" : \"penten\",\r\n    \"issuedCopies\" : 5,\r\n    \"totalCopies\" : 10\r\n},\r\n{    \"id\" : 2,\r\n    \"isbn\" : \"springboot\",\r\n    \"title\" : \"spring by mahet\",\r\n    \"publishedDate\" : \"2022-05-16T06:14:00.374Z\",\r\n    \"author\" : \"spring\",\r\n    \"issuedCopies\" : 5,\r\n    \"totalCopies\" : 10\r\n},\r\n{  \"id\" : 3,\r\n    \"isbn\" : \"Advanced java\",\r\n    \"title\" : \"Anvanced-java by crown\",\r\n    \"publishedDate\" : \"2022-05-16T06:14:00.374Z\",\r\n    \"author\" : \"Rubik\",\r\n    \"issuedCopies\" : 5,\r\n    \"totalCopies\" : 10\r\n},\r\n{    \"id\" : 4,\r\n    \"isbn\" : \"Python\",\r\n    \"title\" : \"Python by Daven\",\r\n    \"publishedDate\" : \"2022-05-16T06:14:00.374Z\",\r\n    \"author\" : \"Daven\",\r\n    \"issuedCopies\" : 5,\r\n    \"totalCopies\" : 10\r\n}\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:9194/library/multiplebookSave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9194",
+					"path": [
+						"library",
+						"multiplebookSave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/issue/getAvailableCopies/3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\" : 1.0,\r\n    \"isbn\" : \"core java\",\r\n    \"title\" : \"core-java by crown\",\r\n    \"publishedDate\" : \"2022-05-16T06:14:00.374Z\",\r\n    \"author\" : \"penten\",\r\n    \"issuedCopies\" : 5,\r\n    \"totalCopies\" : 10\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9195/issue/getAvailableCopies/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9195",
+					"path": [
+						"issue",
+						"getAvailableCopies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/library/book/3",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{    \"bookId\": 3,\r\n    \"isbn\" : \"Abhay java\",\r\n    \"title\" : \"Abhay-java by crown\",\r\n    \"publishedDate\" : \"2022-05-16T06:14:00.374Z\",\r\n    \"author\" : \"Abhay\",\r\n    \"issuedCopies\" : 5,\r\n    \"totalCopies\" : 12\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9194/library/book/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9194",
+					"path": [
+						"library",
+						"book",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9194/library/book/4",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"isbn\" : \"core java\",\r\n    \"title\" : \"core-java by crown\",\r\n    \"publishedDate\" : \"14/02/2000\",\r\n    \"author\" : \"penten\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n},\r\n{\r\n    \"isbn\" : \"springboot\",\r\n    \"title\" : \"spring by mahet\",\r\n    \"publishedDate\" : \"14/02/2001\",\r\n    \"author\" : \"spring\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n},\r\n{\r\n    \"isbn\" : \"Advanced java\",\r\n    \"title\" : \"Anvanced-java by crown\",\r\n    \"publishedDate\" : \"14/02/2022\",\r\n    \"author\" : \"Rubik\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n},\r\n{\r\n    \"isbn\" : \"Python\",\r\n    \"title\" : \"Python by Daven\",\r\n    \"publishedDate\" : \"14/02/2022\",\r\n    \"author\" : \"Daven\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n}\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:9194/library/book/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9194",
+					"path": [
+						"library",
+						"book",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/issue/title/core-java by crown",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true,
+					"host": true
+				},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmhheSIsImlhdCI6MTY1Mjg0MzI3OCwiZXhwIjoxNjUyODQzNDU4LCJlbWFpbCI6ImFiaGF5QGdtYWlsLmNvbSJ9.Jxvk1kT0zRmV8FVHT7xWF4DInxogMAIz4AnpuUh1RtkGYwlFJDRMv_oFDU4Us1iISLtg-xsV06u8uqi1ODBcVQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n    \"isbn\" : \"core java\",\r\n    \"title\" : \"core-java by crown\",\r\n    \"publishedDate\" : \"14/02/2000\",\r\n    \"author\" : \"penten\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n},\r\n{\r\n    \"isbn\" : \"springboot\",\r\n    \"title\" : \"spring by mahet\",\r\n    \"publishedDate\" : \"14/02/2001\",\r\n    \"author\" : \"spring\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n},\r\n{\r\n    \"isbn\" : \"Advanced java\",\r\n    \"title\" : \"Anvanced-java by crown\",\r\n    \"publishedDate\" : \"14/02/2022\",\r\n    \"author\" : \"Rubik\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n},\r\n{\r\n    \"isbn\" : \"Python\",\r\n    \"title\" : \"Python by Daven\",\r\n    \"publishedDate\" : \"14/02/2022\",\r\n    \"author\" : \"Daven\",\r\n    \"issuedCopies\" : \"5\",\r\n    \"totalCopies\" : \"10\"\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8989/issue/title/core-java by crown",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"issue",
+						"title",
+						"core-java by crown"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"abhay\",\r\n    \"email\" : \"abhay@gmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"abhay\",\r\n    \"email\" : \"abhay@gmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8989/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmhheSIsImlhdCI6MTY1Mjk0MDA5MiwiZXhwIjoxNjUyOTQwMjcyLCJlbWFpbCI6ImFiaGF5QGdtYWlsLmNvbSJ9.h2qmsIuV77qa4zijk1iLTn9MrSHgTG2gTZ0QlowHtNOgp8wxjZIyTpTq670OMAgR4u8wUYoq7iHHHGhUP6CqJw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"abhay@gmail.com\",\r\n  \"username\": \"abhay\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8989/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
